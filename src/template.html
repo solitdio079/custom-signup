@@ -1,19 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Restaurant Page</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <button id="home">Home</button>
-                <button id="menu">Menu</button>
-                <button id="contact">Contact</button>
-            </nav>
-        </header>
-
-        <div class="content"></div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <form class="card" novalidate>
+        <h1 class="title">Sign Up Form</h1>
+        <p class="description">Here you can sign up to our website!</p>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" minlength="8" required placeholder="Enter your email!">
+            <span class="form-error" id="emailError">Here we go</span>
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" id="country" minlength="3" required placeholder="Enter your country!">
+            <span class="form-error" id="countryError"></span>
+        </div>
+        <div class="form-group">
+            <label for="postal-code">Postal Code</label>
+            <input type="text" id="postal-code" maxlength="5" pattern="\d{5}" required placeholder="Enter the Postal code!">
+            <span class="form-error" id="postal-codeError"></span>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" minlength="8" required placeholder="Enter your password!">
+            <span class="form-error" id="passwordError"></span>
+        </div>
+        <div class="form-group">
+            <label for="password-confirm">Confirm Password</label>
+            <input type="password" minlength="8" required id="password-confirm" placeholder="Confirm your password!">
+            <span class="form-error" id="password-confirmError"></span>
+        </div>
+        <div class="card-actions">
+            <button> Sign up </button>
+        </div>
+    </form>
+</body>
 </html>
